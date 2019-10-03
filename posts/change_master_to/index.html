@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Posts | TY KIM BOOK</title>
+<title>[MYSQL] CHANGE MASTER TO | TY KIM BOOK</title>
 
 
 <link rel="stylesheet" href="/book.min.89885fa0429ec73067282f26fc0c6d38cfc617a443ec4e835d47b821c52c6e92.css" integrity="sha256-iYhfoEKexzBnKC8m/AxtOM/GF6RD7E6DXUe4IcUsbpI=">
@@ -17,7 +17,6 @@
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 
 
-<link rel="alternate" type="application/rss+xml" href="https://tykim06.github.io/posts/index.xml" title="TY KIM BOOK" />
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -54,7 +53,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2fposts\2f "] {
+  nav ul a[href$="\2fposts\2f change_master_to\2f "] {
       color: #004ed0;
   }
   </style>
@@ -89,34 +88,41 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="/svg/menu.svg" alt="Menu" />
   </label>
-  <strong>Posts</strong>
+  <strong>[MYSQL] CHANGE MASTER TO</strong>
 </header>
 
       
-  
-  
-  
-  <article class="markdown">
-    <h2>
-      <a href="/posts/change_master_to/">[MYSQL] CHANGE MASTER TO</a>
-    </h2>
-    <h5>
-      <strong>Oct 2, 2019</strong>
-    </h5>
-    <p> 구문 CHANGE MASTER TO MASTER_HOST='{ip}', MASTER_POST={port}, MASTER_USER='{user}', MASTER_PASSWORD='{password}', MASTER_LOG_FILE='{bin_log_file}', MASTER_LOG_POS={bin_log_position};  
-    </p>
-  </article>
-  
-  
 
+<header class="markdown">
+  <h1>[MYSQL] CHANGE MASTER TO</h1>
+  <h5>
+    <strong>Oct 2, 2019</strong>
+  </h5>
+</header>
+<article class="markdown">
 
+<h1 id="구문">구문</h1>
+
+<hr />
+
+<pre><code>CHANGE MASTER TO
+  MASTER_HOST='{ip}',
+  MASTER_POST={port},
+  MASTER_USER='{user}',
+  MASTER_PASSWORD='{password}',
+  MASTER_LOG_FILE='{bin_log_file}',
+  MASTER_LOG_POS={bin_log_position};
+</code></pre>
+</article>
 
       
 <div class="book-footer justify-end">
   
   
   <div>
-    
+    <a href="https://github.com/tykim06/blog/edit/develop/content/posts/change_master_to.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" alt="Edit" /> Edit this page
+    </a>
   </div>
   
 </div>
@@ -126,6 +132,16 @@ https://github.com/alex-shpak/hugo-book
     </div>
 
     
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#구문">구문</a></li>
+</ul>
+</nav>
+  </aside>
+
 
 
   </main>

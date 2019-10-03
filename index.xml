@@ -13,10 +13,10 @@
     
     <item>
       <title>[MYSQL] CHANGE MASTER TO</title>
-      <link>https://tykim06.github.io/posts/mysql/change_master_to/</link>
+      <link>https://tykim06.github.io/posts/change_master_to/</link>
       <pubDate>Wed, 02 Oct 2019 18:27:04 +0900</pubDate>
       
-      <guid>https://tykim06.github.io/posts/mysql/change_master_to/</guid>
+      <guid>https://tykim06.github.io/posts/change_master_to/</guid>
       <description> 구문 CHANGE MASTER TO MASTER_HOST=&#39;{ip}&#39;, MASTER_POST={port}, MASTER_USER=&#39;{user}&#39;, MASTER_PASSWORD=&#39;{password}&#39;, MASTER_LOG_FILE=&#39;{bin_log_file}&#39;, MASTER_LOG_POS={bin_log_position};  </description>
     </item>
     
