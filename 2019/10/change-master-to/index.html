@@ -13,8 +13,8 @@
 
 <meta property="og:description" content="CHANGE MASTER TO changes the parameters that the slave server uses for connecting to the master server, for reading the master binary log, and reading the slave relay log. It also updates the contents of the master info and relay log info repositories. CHANGE MASTER TO requires the SUPER privilege.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CHANGE MASTER TO">
-<meta name="twitter:title" content="CHANGE MASTER TO">
+<meta property="og:title" content="Change Master To">
+<meta name="twitter:title" content="Change Master To">
 <meta property="og:url" content="https://tykim06.github.io/2019/10/change-master-to/">
 <meta property="twitter:url" content="https://tykim06.github.io/2019/10/change-master-to/">
 <meta property="og:site_name" content="TY KIM devLog">
@@ -38,7 +38,7 @@
   
   
     
-      <meta property="article:tag" content="change master to">
+      <meta property="article:tag" content="change-master-to">
     
       <meta property="article:tag" content="replication">
     
@@ -65,7 +65,7 @@
   <meta property="twitter:image" content="https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/formspring-512.png">
 
 
-    <title>CHANGE MASTER TO</title>
+    <title>Change Master To</title>
 
     <link rel="icon" href="https://tykim06.github.io/favicon.png">
     
@@ -92,7 +92,7 @@
 
   <body>
     <div id="blog">
-      <header id="header" data-behavior="5">
+      <header id="header" data-behavior="2">
   <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
   <div class="header-title">
     <a class="header-title-link" href="https://tykim06.github.io/">TY KIM devLog</a>
@@ -112,7 +112,7 @@
   
 </header>
 
-      <nav id="sidebar" data-behavior="5">
+      <nav id="sidebar" data-behavior="2">
   <div class="sidebar-container">
     
       <div class="sidebar-profile">
@@ -202,7 +202,7 @@
 
       
 
-      <div id="main" data-behavior="5"
+      <div id="main" data-behavior="2"
         class="
                hasCoverMetaIn
                ">
@@ -212,7 +212,7 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      CHANGE MASTER TO
+      Change Master To
     </h1>
   
   
@@ -283,6 +283,20 @@ server_id_list:
     [server_id [, server_id] ... ]
 </code></pre>
 
+<h1 id="예시-구문">예시 구문</h1>
+
+<hr />
+
+<pre><code>CHANGE MASTER TO
+  MASTER_HOST='db01',
+  MASTER_PORT=3306,
+  MASTER_USER='replication',
+  MASTER_PASSWORD='mysqlpass',
+  MASTER_LOG_FILE='mysql-bin.000012',
+  MASTER_LOG_POS=4,
+  MASTER_CONNECT_RETRY=10;
+</code></pre>
+
 <h1 id="출처">출처</h1>
 
 <hr />
@@ -301,7 +315,7 @@ server_id_list:
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://tykim06.github.io/tags/change-master-to/">change master to</a>
+  <a class="tag tag--primary tag--small" href="https://tykim06.github.io/tags/change-master-to/">change-master-to</a>
 
   <a class="tag tag--primary tag--small" href="https://tykim06.github.io/tags/replication/">replication</a>
 
@@ -320,7 +334,7 @@ server_id_list:
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2019/10/start-slave/" data-tooltip="Start Slave">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -398,7 +412,7 @@ server_id_list:
 </footer>
 
       </div>
-      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="2">
         <div class="post-actions-wrap">
   
       <nav >
@@ -406,7 +420,7 @@ server_id_list:
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2019/10/start-slave/" data-tooltip="Start Slave">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -469,7 +483,7 @@ server_id_list:
 </div>
 
       </div>
-      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+      <div id="share-options-bar" class="share-options-bar" data-behavior="2">
   <i id="btn-close-shareoptions" class="fa fa-close"></i>
   <ul class="share-options">
     

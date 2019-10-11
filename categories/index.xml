@@ -6,7 +6,7 @@
     <description>Recent content in Categories on TY KIM devLog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Oct 2019 15:40:25 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 11 Oct 2019 17:22:20 +0900</lastBuildDate>
     
 	<atom:link href="https://tykim06.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>mysql</title>
       <link>https://tykim06.github.io/categories/mysql/</link>
-      <pubDate>Tue, 08 Oct 2019 15:40:25 +0900</pubDate>
+      <pubDate>Fri, 11 Oct 2019 17:22:20 +0900</pubDate>
       
       <guid>https://tykim06.github.io/categories/mysql/</guid>
       <description></description>
@@ -23,9 +23,18 @@
     <item>
       <title>syntax</title>
       <link>https://tykim06.github.io/categories/syntax/</link>
-      <pubDate>Tue, 08 Oct 2019 15:40:25 +0900</pubDate>
+      <pubDate>Fri, 11 Oct 2019 17:22:20 +0900</pubDate>
       
       <guid>https://tykim06.github.io/categories/syntax/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>variable</title>
+      <link>https://tykim06.github.io/categories/variable/</link>
+      <pubDate>Fri, 11 Oct 2019 17:10:34 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/categories/variable/</guid>
       <description></description>
     </item>
     

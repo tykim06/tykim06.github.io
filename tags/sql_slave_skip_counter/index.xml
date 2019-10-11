@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sql_slave_skip_counter on TY KIM devLog</title>
+    <link>https://tykim06.github.io/tags/sql_slave_skip_counter/</link>
+    <description>Recent content in sql_slave_skip_counter on TY KIM devLog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 Oct 2019 17:10:34 +0900</lastBuildDate>
+    
+	<atom:link href="https://tykim06.github.io/tags/sql_slave_skip_counter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>sql_slave_skip_counter</title>
+      <link>https://tykim06.github.io/2019/10/sql_slave_skip_counter/</link>
+      <pubDate>Fri, 11 Oct 2019 17:10:34 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/2019/10/sql_slave_skip_counter/</guid>
+      <description>&lt;p&gt;This statement skips the next N events from the master. This is useful for recovering from replication stops caused by a statement.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

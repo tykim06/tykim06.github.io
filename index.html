@@ -8,18 +8,18 @@
 <meta name="generator" content="Hugo 0.58.3 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Taeyeop Kim">
 <meta name="keywords" content="">
-<meta name="description" content="Hugo tranquilpeak theme demo">
+<meta name="description" content="Taeyeop Kim devLog">
 
 
-<meta property="og:description" content="Hugo tranquilpeak theme demo">
+<meta property="og:description" content="Taeyeop Kim devLog">
 <meta property="og:type" content="website">
 <meta property="og:title" content="TY KIM devLog">
 <meta name="twitter:title" content="TY KIM devLog">
 <meta property="og:url" content="https://tykim06.github.io/">
 <meta property="twitter:url" content="https://tykim06.github.io/">
 <meta property="og:site_name" content="TY KIM devLog">
-<meta property="og:description" content="Hugo tranquilpeak theme demo">
-<meta name="twitter:description" content="Hugo tranquilpeak theme demo">
+<meta property="og:description" content="Taeyeop Kim devLog">
+<meta name="twitter:description" content="Taeyeop Kim devLog">
 <meta property="og:locale" content="en-us">
 
 
@@ -194,8 +194,158 @@
     
     <div class="postShorten-header">
       <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://tykim06.github.io/2019/10/change-replication-filter/">
+          Change Replication Filter
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-10-11T17:22:20&#43;09:00">
+        
+  October 11, 2019
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://tykim06.github.io/categories/mysql">mysql</a>, 
+    
+      <a class="category-link" href="https://tykim06.github.io/categories/syntax">syntax</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <p><strong><em>CHANGE REPLICATION</em></strong> FILTER sets one or more replication filtering rules on the slave in the same way as starting the slave mysqld with replication filtering options such as <em>&ndash;replicate-do-db</em> or <em>&ndash;replicate-wild-ignore-table</em>. Unlike the case with the server options, this statement does not require restarting the server to take effect, only that the slave SQL thread be stopped using <strong><em>STOP SLAVE SQL_THREAD</em></strong> first (and restarted with <strong><em>START SLAVE SQL_THREAD</em></strong> afterwards). <strong><em>CHANGE REPLICATION FILTER</em></strong> requires the <strong><em>REPLICATION_SLAVE_ADMIN</em></strong> or <strong><em>SUPER</em></strong> privilege. Use the FOR CHANNEL channel clause to make a replication filter specific to a replication channel, for example on a multi-source replication slave. Filters applied without a specific FOR CHANNEL clause are considered global filters, meaning that they are applied to all replication channels.</p>
+      
+      <p>
+        <a href="https://tykim06.github.io/2019/10/change-replication-filter/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://tykim06.github.io/2019/10/sql_slave_skip_counter/">
+          sql_slave_skip_counter
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-10-11T17:10:34&#43;09:00">
+        
+  October 11, 2019
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://tykim06.github.io/categories/mysql">mysql</a>, 
+    
+      <a class="category-link" href="https://tykim06.github.io/categories/variable">variable</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <p>This statement skips the next N events from the master. This is useful for recovering from replication stops caused by a statement.</p>
+      
+      <p>
+        <a href="https://tykim06.github.io/2019/10/sql_slave_skip_counter/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
+        <a class="link-unstyled" href="https://tykim06.github.io/2019/10/start-slave/">
+          Start Slave
+        </a>
+      </h1>
+      
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-10-11T14:19:02&#43;09:00">
+        
+  October 11, 2019
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://tykim06.github.io/categories/mysql">mysql</a>, 
+    
+      <a class="category-link" href="https://tykim06.github.io/categories/syntax">syntax</a>
+    
+  
+
+  </div>
+
+    </div>
+    <div class="postShorten-excerpt" itemprop="articleBody">
+      
+        <p><strong><em>START SLAVE</em></strong> with no thread_type options starts both of the slave threads. The I/O thread reads events from the master server and stores them in the relay log. The SQL thread reads events from the relay log and executes them. <strong><em>START SLAVE</em></strong> requires the <strong><em>REPLICATION_SLAVE_ADMIN</em></strong> or <strong><em>SUPER</em></strong> privilege.</p>
+      
+      <p>
+        <a href="https://tykim06.github.io/2019/10/start-slave/" class="postShorten-excerpt_link link">Continue reading</a>
+        
+      </p>
+    </div>
+  </div>
+  
+</article>
+
+          
+            
+
+  
+
+<article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+  <div class="postShorten-wrap">
+    
+    <div class="postShorten-header">
+      <h1 class="postShorten-title" itemprop="headline">
         <a class="link-unstyled" href="https://tykim06.github.io/2019/10/change-master-to/">
-          CHANGE MASTER TO
+          Change Master To
         </a>
       </h1>
       

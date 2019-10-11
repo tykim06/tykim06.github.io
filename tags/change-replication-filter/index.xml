@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>change-replication-filter on TY KIM devLog</title>
+    <link>https://tykim06.github.io/tags/change-replication-filter/</link>
+    <description>Recent content in change-replication-filter on TY KIM devLog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 Oct 2019 17:22:20 +0900</lastBuildDate>
+    
+	<atom:link href="https://tykim06.github.io/tags/change-replication-filter/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Change Replication Filter</title>
+      <link>https://tykim06.github.io/2019/10/change-replication-filter/</link>
+      <pubDate>Fri, 11 Oct 2019 17:22:20 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/2019/10/change-replication-filter/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;CHANGE REPLICATION&lt;/em&gt;&lt;/strong&gt; FILTER sets one or more replication filtering rules on the slave in the same way as starting the slave mysqld with replication filtering options such as &lt;em&gt;&amp;ndash;replicate-do-db&lt;/em&gt; or &lt;em&gt;&amp;ndash;replicate-wild-ignore-table&lt;/em&gt;. Unlike the case with the server options, this statement does not require restarting the server to take effect, only that the slave SQL thread be stopped using &lt;strong&gt;&lt;em&gt;STOP SLAVE SQL_THREAD&lt;/em&gt;&lt;/strong&gt; first (and restarted with &lt;strong&gt;&lt;em&gt;START SLAVE SQL_THREAD&lt;/em&gt;&lt;/strong&gt; afterwards). &lt;strong&gt;&lt;em&gt;CHANGE REPLICATION FILTER&lt;/em&gt;&lt;/strong&gt; requires the &lt;strong&gt;&lt;em&gt;REPLICATION_SLAVE_ADMIN&lt;/em&gt;&lt;/strong&gt; or &lt;strong&gt;&lt;em&gt;SUPER&lt;/em&gt;&lt;/strong&gt; privilege. Use the FOR CHANNEL channel clause to make a replication filter specific to a replication channel, for example on a multi-source replication slave. Filters applied without a specific FOR CHANNEL clause are considered global filters, meaning that they are applied to all replication channels.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
