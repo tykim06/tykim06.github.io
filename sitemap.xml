@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://tykim06.github.io/tags/binlog/</loc>
+    <lastmod>2019-10-08T15:40:25+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tykim06.github.io/categories/</loc>
     <lastmod>2019-10-08T15:40:25+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tykim06.github.io/categories/category/</loc>
+    <loc>https://tykim06.github.io/2019/10/change-master-to/</loc>
+    <lastmod>2019-10-08T15:40:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tykim06.github.io/tags/change-master-to/</loc>
+    <lastmod>2019-10-08T15:40:25+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tykim06.github.io/categories/mysql/</loc>
     <lastmod>2019-10-08T15:40:25+09:00</lastmod>
   </url>
   
@@ -18,27 +33,22 @@
   </url>
   
   <url>
-    <loc>https://tykim06.github.io/categories/subcategory/</loc>
+    <loc>https://tykim06.github.io/tags/relaylog/</loc>
     <lastmod>2019-10-08T15:40:25+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tykim06.github.io/tags/tag1/</loc>
+    <loc>https://tykim06.github.io/tags/replication/</loc>
     <lastmod>2019-10-08T15:40:25+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://tykim06.github.io/tags/tag2/</loc>
+    <loc>https://tykim06.github.io/categories/syntax/</loc>
     <lastmod>2019-10-08T15:40:25+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://tykim06.github.io/tags/</loc>
-    <lastmod>2019-10-08T15:40:25+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tykim06.github.io/2019/10/test/</loc>
     <lastmod>2019-10-08T15:40:25+09:00</lastmod>
   </url>
   
@@ -64,11 +74,6 @@
   
   <url>
     <loc>https://tykim06.github.io/2019/03/markdown-syntax-guide/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tykim06.github.io/categories/syntax/</loc>
     <lastmod>2019-03-11T00:00:00+00:00</lastmod>
   </url>
   

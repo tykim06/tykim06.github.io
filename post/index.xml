@@ -12,12 +12,12 @@
     
     
     <item>
-      <title>Test</title>
-      <link>https://tykim06.github.io/2019/10/test/</link>
+      <title>CHANGE MASTER TO</title>
+      <link>https://tykim06.github.io/2019/10/change-master-to/</link>
       <pubDate>Tue, 08 Oct 2019 15:40:25 +0900</pubDate>
       
-      <guid>https://tykim06.github.io/2019/10/test/</guid>
-      <description></description>
+      <guid>https://tykim06.github.io/2019/10/change-master-to/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;CHANGE MASTER&lt;/em&gt;&lt;/strong&gt; TO changes the parameters that the slave server uses for connecting to the master server, for reading the master binary log, and reading the slave relay log. It also updates the contents of the master info and relay log info repositories. &lt;strong&gt;&lt;em&gt;CHANGE MASTER TO&lt;/em&gt;&lt;/strong&gt; requires the &lt;strong&gt;&lt;em&gt;SUPER&lt;/em&gt;&lt;/strong&gt; privilege.&lt;/p&gt;</description>
     </item>
     
     <item>

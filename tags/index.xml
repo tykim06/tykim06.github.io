@@ -12,20 +12,38 @@
     
     
     <item>
-      <title>tag1</title>
-      <link>https://tykim06.github.io/tags/tag1/</link>
+      <title>binlog</title>
+      <link>https://tykim06.github.io/tags/binlog/</link>
       <pubDate>Tue, 08 Oct 2019 15:40:25 +0900</pubDate>
       
-      <guid>https://tykim06.github.io/tags/tag1/</guid>
+      <guid>https://tykim06.github.io/tags/binlog/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>tag2</title>
-      <link>https://tykim06.github.io/tags/tag2/</link>
+      <title>change master to</title>
+      <link>https://tykim06.github.io/tags/change-master-to/</link>
       <pubDate>Tue, 08 Oct 2019 15:40:25 +0900</pubDate>
       
-      <guid>https://tykim06.github.io/tags/tag2/</guid>
+      <guid>https://tykim06.github.io/tags/change-master-to/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>relaylog</title>
+      <link>https://tykim06.github.io/tags/relaylog/</link>
+      <pubDate>Tue, 08 Oct 2019 15:40:25 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/relaylog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>replication</title>
+      <link>https://tykim06.github.io/tags/replication/</link>
+      <pubDate>Tue, 08 Oct 2019 15:40:25 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/replication/</guid>
       <description></description>
     </item>
     
