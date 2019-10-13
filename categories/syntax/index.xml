@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>TY KIM devLog</title>
-    <link>https://tykim06.github.io/</link>
-    <description>Recent content on TY KIM devLog</description>
+    <title>syntax on TY KIM devLog</title>
+    <link>https://tykim06.github.io/categories/syntax/</link>
+    <description>Recent content in syntax on TY KIM devLog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 11 Oct 2019 17:22:20 +0900</lastBuildDate>
     
-	<atom:link href="https://tykim06.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://tykim06.github.io/categories/syntax/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -18,15 +18,6 @@
       
       <guid>https://tykim06.github.io/2019/10/change-replication-filter/</guid>
       <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;CHANGE REPLICATION FILTER&lt;/em&gt;&lt;/strong&gt; sets one or more replication filtering rules on the slave in the same way as starting the slave mysqld with replication filtering options such as &lt;em&gt;&amp;ndash;replicate-do-db&lt;/em&gt; or &lt;em&gt;&amp;ndash;replicate-wild-ignore-table&lt;/em&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>sql_slave_skip_counter</title>
-      <link>https://tykim06.github.io/2019/10/sql_slave_skip_counter/</link>
-      <pubDate>Fri, 11 Oct 2019 17:10:34 +0900</pubDate>
-      
-      <guid>https://tykim06.github.io/2019/10/sql_slave_skip_counter/</guid>
-      <description>&lt;p&gt;This statement skips the next N events from the master. This is useful for recovering from replication stops caused by a statement.&lt;/p&gt;</description>
     </item>
     
     <item>

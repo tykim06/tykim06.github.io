@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>relaylog on TY KIM devLog</title>
+    <link>https://tykim06.github.io/tags/relaylog/</link>
+    <description>Recent content in relaylog on TY KIM devLog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 08 Oct 2019 15:40:25 +0900</lastBuildDate>
+    
+	<atom:link href="https://tykim06.github.io/tags/relaylog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Change Master To</title>
+      <link>https://tykim06.github.io/2019/10/change-master-to/</link>
+      <pubDate>Tue, 08 Oct 2019 15:40:25 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/2019/10/change-master-to/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;CHANGE MASTER TO&lt;/em&gt;&lt;/strong&gt; changes the parameters that the slave server uses for connecting to the master server, for reading the master binary log, and reading the slave relay log. It also updates the contents of the master info and relay log info repositories.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

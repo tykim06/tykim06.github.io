@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on TY KIM devLog</title>
+    <link>https://tykim06.github.io/tags/</link>
+    <description>Recent content in Tags on TY KIM devLog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 11 Oct 2019 17:22:20 +0900</lastBuildDate>
+    
+	<atom:link href="https://tykim06.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>change-replication-filter</title>
+      <link>https://tykim06.github.io/tags/change-replication-filter/</link>
+      <pubDate>Fri, 11 Oct 2019 17:22:20 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/change-replication-filter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>replication</title>
+      <link>https://tykim06.github.io/tags/replication/</link>
+      <pubDate>Fri, 11 Oct 2019 17:22:20 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/replication/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sql_slave_skip_counter</title>
+      <link>https://tykim06.github.io/tags/sql_slave_skip_counter/</link>
+      <pubDate>Fri, 11 Oct 2019 17:10:34 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/sql_slave_skip_counter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>start-slave</title>
+      <link>https://tykim06.github.io/tags/start-slave/</link>
+      <pubDate>Fri, 11 Oct 2019 14:19:02 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/start-slave/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>binlog</title>
+      <link>https://tykim06.github.io/tags/binlog/</link>
+      <pubDate>Tue, 08 Oct 2019 15:40:25 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/binlog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>change-master-to</title>
+      <link>https://tykim06.github.io/tags/change-master-to/</link>
+      <pubDate>Tue, 08 Oct 2019 15:40:25 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/change-master-to/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>relaylog</title>
+      <link>https://tykim06.github.io/tags/relaylog/</link>
+      <pubDate>Tue, 08 Oct 2019 15:40:25 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/relaylog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>https://tykim06.github.io/tags/css/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html</title>
+      <link>https://tykim06.github.io/tags/html/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/html/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>markdown</title>
+      <link>https://tykim06.github.io/tags/markdown/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/markdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>themes</title>
+      <link>https://tykim06.github.io/tags/themes/</link>
+      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/themes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hortcodes</title>
+      <link>https://tykim06.github.io/tags/hortcodes/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/hortcodes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rivacy</title>
+      <link>https://tykim06.github.io/tags/rivacy/</link>
+      <pubDate>Sun, 10 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/rivacy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>text</title>
+      <link>https://tykim06.github.io/tags/text/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/text/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
