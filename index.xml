@@ -6,10 +6,28 @@
     <description>Recent content on TY KIM devLog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Oct 2019 17:22:20 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 16 Oct 2019 18:58:07 +0900</lastBuildDate>
     
 	<atom:link href="https://tykim06.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>secure_file_priv</title>
+      <link>https://tykim06.github.io/2019/10/secure_file_priv/</link>
+      <pubDate>Wed, 16 Oct 2019 18:58:07 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/2019/10/secure_file_priv/</guid>
+      <description>&lt;p&gt;This variable is used to limit the effect of data import and export operations, such as those performed by the &lt;strong&gt;&lt;em&gt;LOAD DATA&lt;/em&gt;&lt;/strong&gt; and &lt;strong&gt;&lt;em&gt;SELECT &amp;hellip; INTO OUTFILE&lt;/em&gt;&lt;/strong&gt; statements and the &lt;strong&gt;&lt;em&gt;LOAD_FILE()&lt;/em&gt;&lt;/strong&gt; function.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ERROR 1290 HY000</title>
+      <link>https://tykim06.github.io/2019/10/error-1290-hy000/</link>
+      <pubDate>Wed, 16 Oct 2019 18:43:49 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/2019/10/error-1290-hy000/</guid>
+      <description>&lt;p&gt;ERROR 1290 (HY000): The MySQL server is running with the &amp;ndash;secure-file-priv option so it cannot execute this statement&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>Change Replication Filter</title>

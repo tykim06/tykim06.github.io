@@ -8,39 +8,41 @@
 <meta name="generator" content="Hugo 0.58.3 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Taeyeop Kim">
 <meta name="keywords" content="">
-<meta name="description" content="CHANGE REPLICATION FILTER sets one or more replication filtering rules on the slave in the same way as starting the slave mysqld with replication filtering options such as &ndash;replicate-do-db or &ndash;replicate-wild-ignore-table.">
+<meta name="description" content="ERROR 1290 (HY000): The MySQL server is running with the &ndash;secure-file-priv option so it cannot execute this statement">
 
 
-<meta property="og:description" content="CHANGE REPLICATION FILTER sets one or more replication filtering rules on the slave in the same way as starting the slave mysqld with replication filtering options such as &ndash;replicate-do-db or &ndash;replicate-wild-ignore-table.">
+<meta property="og:description" content="ERROR 1290 (HY000): The MySQL server is running with the &ndash;secure-file-priv option so it cannot execute this statement">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Change Replication Filter">
-<meta name="twitter:title" content="Change Replication Filter">
-<meta property="og:url" content="https://tykim06.github.io/2019/10/change-replication-filter/">
-<meta property="twitter:url" content="https://tykim06.github.io/2019/10/change-replication-filter/">
+<meta property="og:title" content="ERROR 1290 HY000">
+<meta name="twitter:title" content="ERROR 1290 HY000">
+<meta property="og:url" content="https://tykim06.github.io/2019/10/error-1290-hy000/">
+<meta property="twitter:url" content="https://tykim06.github.io/2019/10/error-1290-hy000/">
 <meta property="og:site_name" content="TY KIM devLog">
-<meta property="og:description" content="CHANGE REPLICATION FILTER sets one or more replication filtering rules on the slave in the same way as starting the slave mysqld with replication filtering options such as &ndash;replicate-do-db or &ndash;replicate-wild-ignore-table.">
-<meta name="twitter:description" content="CHANGE REPLICATION FILTER sets one or more replication filtering rules on the slave in the same way as starting the slave mysqld with replication filtering options such as &ndash;replicate-do-db or &ndash;replicate-wild-ignore-table.">
+<meta property="og:description" content="ERROR 1290 (HY000): The MySQL server is running with the &ndash;secure-file-priv option so it cannot execute this statement">
+<meta name="twitter:description" content="ERROR 1290 (HY000): The MySQL server is running with the &ndash;secure-file-priv option so it cannot execute this statement">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2019-10-11T17:22:20">
+    <meta property="article:published_time" content="2019-10-16T18:43:49">
   
   
-    <meta property="article:modified_time" content="2019-10-11T17:22:20">
+    <meta property="article:modified_time" content="2019-10-16T18:43:49">
   
   
   
     
       <meta property="article:section" content="mysql">
     
-      <meta property="article:section" content="syntax">
+      <meta property="article:section" content="error">
     
   
   
     
-      <meta property="article:tag" content="change-replication-filter">
+      <meta property="article:tag" content="secure_file_priv">
     
-      <meta property="article:tag" content="replication">
+      <meta property="article:tag" content="select_into_outfile">
+    
+      <meta property="article:tag" content="load_data">
     
   
 
@@ -61,14 +63,14 @@
   <meta property="twitter:image" content="https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/formspring-512.png">
 
 
-    <title>Change Replication Filter</title>
+    <title>ERROR 1290 HY000</title>
 
     <link rel="icon" href="https://tykim06.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://tykim06.github.io/2019/10/change-replication-filter/">
+    <link rel="canonical" href="https://tykim06.github.io/2019/10/error-1290-hy000/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -208,15 +210,15 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Change Replication Filter
+      ERROR 1290 HY000
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2019-10-11T17:22:20&#43;09:00">
+      <time itemprop="datePublished" datetime="2019-10-16T18:43:49&#43;09:00">
         
-  October 11, 2019
+  October 16, 2019
 
       </time>
     
@@ -227,7 +229,7 @@
     
       <a class="category-link" href="https://tykim06.github.io/categories/mysql">mysql</a>, 
     
-      <a class="category-link" href="https://tykim06.github.io/categories/syntax">syntax</a>
+      <a class="category-link" href="https://tykim06.github.io/categories/error">error</a>
     
   
 
@@ -237,57 +239,45 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p><strong><em>CHANGE REPLICATION FILTER</em></strong> sets one or more replication filtering rules on the slave in the same way as starting the slave mysqld with replication filtering options such as <em>&ndash;replicate-do-db</em> or <em>&ndash;replicate-wild-ignore-table</em>.</p>
+              <p>ERROR 1290 (HY000): The MySQL server is running with the &ndash;secure-file-priv option so it cannot execute this statement</p>
 
-<p>Unlike the case with the server options, this statement does not require restarting the server to take effect, only that the slave SQL thread be stopped using <strong><em>STOP SLAVE SQL_THREAD</em></strong> first (and restarted with <strong><em>START SLAVE SQL_THREAD</em></strong> afterwards).</p>
-
-<p><strong><em>CHANGE REPLICATION FILTER</em></strong> requires the <strong><em>SUPER</em></strong> privilege.</p>
-
-<h1 id="구문">구문</h1>
+<h1 id="이슈-해결">이슈 해결</h1>
 
 <hr />
 
-<pre><code>CHANGE REPLICATION FILTER filter[, filter][, ...]
+<pre><code>vim /etc/my.cnf
 
-filter:
-    REPLICATE_DO_DB = (db_list)
-  | REPLICATE_IGNORE_DB = (db_list)
-  | REPLICATE_DO_TABLE = (tbl_list)
-  | REPLICATE_IGNORE_TABLE = (tbl_list)
-  | REPLICATE_WILD_DO_TABLE = (wild_tbl_list)
-  | REPLICATE_WILD_IGNORE_TABLE = (wild_tbl_list)
-  | REPLICATE_REWRITE_DB = (db_pair_list)
+-- file import, export 경로 제한
+secure_file_priv=&quot;/tmp&quot;
 
-db_list:
-    db_name[, db_name][, ...]
+-- file import, export 경로 제한 없음
+secure_file_priv=&quot;&quot;
 
-tbl_list:
-    db_name.table_name[, db_table_name][, ...]
-wild_tbl_list:
-    'db_pattern.table_pattern'[, 'db_pattern.table_pattern'][, ...]
-
-db_pair_list:
-    (db_pair)[, (db_pair)][, ...]
-
-db_pair:
-    from_db, to_db
+-- file import, export 제한
+secure_file_priv=NULL
 </code></pre>
 
-<h1 id="예시-구문">예시 구문</h1>
+<ul>
+<li>Dynamic variable이 아니기 때문에 my.cnf 파일 변경 후 DB 재시작이 필요하다.</li>
+</ul>
+
+<h1 id="이슈-구문">이슈 구문</h1>
 
 <hr />
 
-<pre><code>CHANGE REPLICATION FILTER REPLICATE_DO_DB = (d1), REPLICATE_IGNORE_DB = (d2);
-CHANGE REPLICATION FILTER REPLICATE_WILD_DO_TABLE = ('db1.old%');
-CHANGE REPLICATION FILTER REPLICATE_WILD_IGNORE_TABLE = ('db1.new%', 'db2.new%');
+<pre><code>SELECT * FROM tbl
+INTO OUTFILE '/result.csv'
+FIELDS TERMINATED BY ','
+ENCLOSED BY '&quot;'
+LINES TERMINATED BY '\n'
 </code></pre>
 
-<h1 id="출처">출처</h1>
+<h1 id="참고">참고</h1>
 
 <hr />
 
 <blockquote>
-<p><a href="https://dev.mysql.com/doc/refman/5.7/en/change-replication-filter.html">https://dev.mysql.com/doc/refman/5.7/en/change-replication-filter.html</a></p>
+<p><a href="https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_secure_file_priv">https://dev.mysql.com/doc/refman/5.7/en/server-system-variables.html#sysvar_secure_file_priv</a></p>
 </blockquote>
               
             </div>
@@ -300,9 +290,11 @@ CHANGE REPLICATION FILTER REPLICATE_WILD_IGNORE_TABLE = ('db1.new%', 'db2.new%')
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">TAGGED IN</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://tykim06.github.io/tags/change-replication-filter/">change-replication-filter</a>
+  <a class="tag tag--primary tag--small" href="https://tykim06.github.io/tags/secure_file_priv/">secure_file_priv</a>
 
-  <a class="tag tag--primary tag--small" href="https://tykim06.github.io/tags/replication/">replication</a>
+  <a class="tag tag--primary tag--small" href="https://tykim06.github.io/tags/select_into_outfile/">select_into_outfile</a>
+
+  <a class="tag tag--primary tag--small" href="https://tykim06.github.io/tags/load_data/">load_data</a>
 
                   </div>
                 
@@ -315,7 +307,7 @@ CHANGE REPLICATION FILTER REPLICATE_WILD_IGNORE_TABLE = ('db1.new%', 'db2.new%')
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2019/10/error-1290-hy000/" data-tooltip="ERROR 1290 HY000">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2019/10/secure_file_priv/" data-tooltip="secure_file_priv">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -323,7 +315,7 @@ CHANGE REPLICATION FILTER REPLICATE_WILD_IGNORE_TABLE = ('db1.new%', 'db2.new%')
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2019/10/sql_slave_skip_counter/" data-tooltip="sql_slave_skip_counter">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2019/10/change-replication-filter/" data-tooltip="Change Replication Filter">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -341,19 +333,19 @@ CHANGE REPLICATION FILTER REPLICATE_WILD_IGNORE_TABLE = ('db1.new%', 'db2.new%')
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://tykim06.github.io/2019/10/change-replication-filter/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://tykim06.github.io/2019/10/error-1290-hy000/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://tykim06.github.io/2019/10/change-replication-filter/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://tykim06.github.io/2019/10/error-1290-hy000/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://tykim06.github.io/2019/10/change-replication-filter/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://tykim06.github.io/2019/10/error-1290-hy000/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -401,7 +393,7 @@ CHANGE REPLICATION FILTER REPLICATE_WILD_IGNORE_TABLE = ('db1.new%', 'db2.new%')
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2019/10/error-1290-hy000/" data-tooltip="ERROR 1290 HY000">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2019/10/secure_file_priv/" data-tooltip="secure_file_priv">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -409,7 +401,7 @@ CHANGE REPLICATION FILTER REPLICATE_WILD_IGNORE_TABLE = ('db1.new%', 'db2.new%')
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2019/10/sql_slave_skip_counter/" data-tooltip="sql_slave_skip_counter">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2019/10/change-replication-filter/" data-tooltip="Change Replication Filter">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -427,19 +419,19 @@ CHANGE REPLICATION FILTER REPLICATE_WILD_IGNORE_TABLE = ('db1.new%', 'db2.new%')
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://tykim06.github.io/2019/10/change-replication-filter/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://tykim06.github.io/2019/10/error-1290-hy000/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://tykim06.github.io/2019/10/change-replication-filter/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://tykim06.github.io/2019/10/error-1290-hy000/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://tykim06.github.io/2019/10/change-replication-filter/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://tykim06.github.io/2019/10/error-1290-hy000/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -469,19 +461,19 @@ CHANGE REPLICATION FILTER REPLICATE_WILD_IGNORE_TABLE = ('db1.new%', 'db2.new%')
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftykim06.github.io%2F2019%2F10%2Fchange-replication-filter%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftykim06.github.io%2F2019%2F10%2Ferror-1290-hy000%2F">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ftykim06.github.io%2F2019%2F10%2Fchange-replication-filter%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ftykim06.github.io%2F2019%2F10%2Ferror-1290-hy000%2F">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Ftykim06.github.io%2F2019%2F10%2Fchange-replication-filter%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Ftykim06.github.io%2F2019%2F10%2Ferror-1290-hy000%2F">
           <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -561,9 +553,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/tykim06.github.io\/2019\/10\/change-replication-filter\/';
+          this.page.url = 'https:\/\/tykim06.github.io\/2019\/10\/error-1290-hy000\/';
           
-            this.page.identifier = '\/2019\/10\/change-replication-filter\/'
+            this.page.identifier = '\/2019\/10\/error-1290-hy000\/'
           
         };
         (function() {

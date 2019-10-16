@@ -6,10 +6,46 @@
     <description>Recent content in Tags on TY KIM devLog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Oct 2019 17:22:20 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 16 Oct 2019 18:58:07 +0900</lastBuildDate>
     
 	<atom:link href="https://tykim06.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>file</title>
+      <link>https://tykim06.github.io/tags/file/</link>
+      <pubDate>Wed, 16 Oct 2019 18:58:07 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/file/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>secure_file_priv</title>
+      <link>https://tykim06.github.io/tags/secure_file_priv/</link>
+      <pubDate>Wed, 16 Oct 2019 18:58:07 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/secure_file_priv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>load_data</title>
+      <link>https://tykim06.github.io/tags/load_data/</link>
+      <pubDate>Wed, 16 Oct 2019 18:43:49 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/load_data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>select_into_outfile</title>
+      <link>https://tykim06.github.io/tags/select_into_outfile/</link>
+      <pubDate>Wed, 16 Oct 2019 18:43:49 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/select_into_outfile/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>change-replication-filter</title>

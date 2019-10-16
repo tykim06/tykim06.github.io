@@ -4,7 +4,67 @@
   
   <url>
     <loc>https://tykim06.github.io/categories/</loc>
-    <lastmod>2019-10-11T17:22:20+09:00</lastmod>
+    <lastmod>2019-10-16T18:58:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tykim06.github.io/tags/file/</loc>
+    <lastmod>2019-10-16T18:58:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tykim06.github.io/categories/mysql/</loc>
+    <lastmod>2019-10-16T18:58:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tykim06.github.io/post/</loc>
+    <lastmod>2019-10-16T18:58:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tykim06.github.io/tags/secure_file_priv/</loc>
+    <lastmod>2019-10-16T18:58:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tykim06.github.io/2019/10/secure_file_priv/</loc>
+    <lastmod>2019-10-16T18:58:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tykim06.github.io/tags/</loc>
+    <lastmod>2019-10-16T18:58:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tykim06.github.io/</loc>
+    <lastmod>2019-10-16T18:58:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tykim06.github.io/categories/variable/</loc>
+    <lastmod>2019-10-16T18:58:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tykim06.github.io/categories/error/</loc>
+    <lastmod>2019-10-16T18:43:49+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tykim06.github.io/2019/10/error-1290-hy000/</loc>
+    <lastmod>2019-10-16T18:43:49+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tykim06.github.io/tags/load_data/</loc>
+    <lastmod>2019-10-16T18:43:49+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tykim06.github.io/tags/select_into_outfile/</loc>
+    <lastmod>2019-10-16T18:43:49+09:00</lastmod>
   </url>
   
   <url>
@@ -14,16 +74,6 @@
   
   <url>
     <loc>https://tykim06.github.io/tags/change-replication-filter/</loc>
-    <lastmod>2019-10-11T17:22:20+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tykim06.github.io/categories/mysql/</loc>
-    <lastmod>2019-10-11T17:22:20+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tykim06.github.io/post/</loc>
     <lastmod>2019-10-11T17:22:20+09:00</lastmod>
   </url>
   
@@ -38,27 +88,12 @@
   </url>
   
   <url>
-    <loc>https://tykim06.github.io/tags/</loc>
-    <lastmod>2019-10-11T17:22:20+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tykim06.github.io/</loc>
-    <lastmod>2019-10-11T17:22:20+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tykim06.github.io/tags/sql_slave_skip_counter/</loc>
     <lastmod>2019-10-11T17:10:34+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://tykim06.github.io/2019/10/sql_slave_skip_counter/</loc>
-    <lastmod>2019-10-11T17:10:34+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tykim06.github.io/categories/variable/</loc>
     <lastmod>2019-10-11T17:10:34+09:00</lastmod>
   </url>
   
