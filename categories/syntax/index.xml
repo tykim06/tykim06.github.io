@@ -6,37 +6,10 @@
     <description>Recent content in syntax on TY KIM devLog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Oct 2019 17:22:20 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://tykim06.github.io/categories/syntax/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Change Replication Filter</title>
-      <link>https://tykim06.github.io/2019/10/change-replication-filter/</link>
-      <pubDate>Fri, 11 Oct 2019 17:22:20 +0900</pubDate>
-      
-      <guid>https://tykim06.github.io/2019/10/change-replication-filter/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;CHANGE REPLICATION FILTER&lt;/em&gt;&lt;/strong&gt; sets one or more replication filtering rules on the slave in the same way as starting the slave mysqld with replication filtering options such as &lt;em&gt;&amp;ndash;replicate-do-db&lt;/em&gt; or &lt;em&gt;&amp;ndash;replicate-wild-ignore-table&lt;/em&gt;.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Start Slave</title>
-      <link>https://tykim06.github.io/2019/10/start-slave/</link>
-      <pubDate>Fri, 11 Oct 2019 14:19:02 +0900</pubDate>
-      
-      <guid>https://tykim06.github.io/2019/10/start-slave/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;START SLAVE&lt;/em&gt;&lt;/strong&gt; with no thread_type options starts both of the slave threads. The I/O thread reads events from the master server and stores them in the relay log. The SQL thread reads events from the relay log and executes them.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Change Master To</title>
-      <link>https://tykim06.github.io/2019/10/change-master-to/</link>
-      <pubDate>Tue, 08 Oct 2019 15:40:25 +0900</pubDate>
-      
-      <guid>https://tykim06.github.io/2019/10/change-master-to/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;&lt;em&gt;CHANGE MASTER TO&lt;/em&gt;&lt;/strong&gt; changes the parameters that the slave server uses for connecting to the master server, for reading the master binary log, and reading the slave relay log. It also updates the contents of the master info and relay log info repositories.&lt;/p&gt;</description>
-    </item>
     
     <item>
       <title>Markdown Syntax Guide</title>

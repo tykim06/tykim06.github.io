@@ -6,10 +6,46 @@
     <description>Recent content in Tags on TY KIM devLog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 16 Oct 2019 18:58:07 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 21 Oct 2019 13:38:26 +0900</lastBuildDate>
     
 	<atom:link href="https://tykim06.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>alter</title>
+      <link>https://tykim06.github.io/tags/alter/</link>
+      <pubDate>Mon, 21 Oct 2019 13:38:26 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/alter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>online-ddl</title>
+      <link>https://tykim06.github.io/tags/online-ddl/</link>
+      <pubDate>Mon, 21 Oct 2019 13:38:26 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/online-ddl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rebuilds-table</title>
+      <link>https://tykim06.github.io/tags/rebuilds-table/</link>
+      <pubDate>Mon, 21 Oct 2019 13:38:26 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/rebuilds-table/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>varchar</title>
+      <link>https://tykim06.github.io/tags/varchar/</link>
+      <pubDate>Mon, 21 Oct 2019 13:38:26 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/tags/varchar/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>file</title>
@@ -30,20 +66,20 @@
     </item>
     
     <item>
-      <title>load_data</title>
-      <link>https://tykim06.github.io/tags/load_data/</link>
+      <title>load-data</title>
+      <link>https://tykim06.github.io/tags/load-data/</link>
       <pubDate>Wed, 16 Oct 2019 18:43:49 +0900</pubDate>
       
-      <guid>https://tykim06.github.io/tags/load_data/</guid>
+      <guid>https://tykim06.github.io/tags/load-data/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>select_into_outfile</title>
-      <link>https://tykim06.github.io/tags/select_into_outfile/</link>
+      <title>select-into-outfile</title>
+      <link>https://tykim06.github.io/tags/select-into-outfile/</link>
       <pubDate>Wed, 16 Oct 2019 18:43:49 +0900</pubDate>
       
-      <guid>https://tykim06.github.io/tags/select_into_outfile/</guid>
+      <guid>https://tykim06.github.io/tags/select-into-outfile/</guid>
       <description></description>
     </item>
     

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>rebuilds-table on TY KIM devLog</title>
+    <link>https://tykim06.github.io/tags/rebuilds-table/</link>
+    <description>Recent content in rebuilds-table on TY KIM devLog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 21 Oct 2019 13:38:26 +0900</lastBuildDate>
+    
+	<atom:link href="https://tykim06.github.io/tags/rebuilds-table/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Extending Varchar Column Size</title>
+      <link>https://tykim06.github.io/2019/10/extending-varchar-column-size/</link>
+      <pubDate>Mon, 21 Oct 2019 13:38:26 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/2019/10/extending-varchar-column-size/</guid>
+      <description>&lt;p&gt;MySQL 5.7 은 online DDL을 지원하지만 varchar 컬럼 길이 변경 시 일부 지원 되지 않는 경우가 있다.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
