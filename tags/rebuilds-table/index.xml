@@ -17,7 +17,7 @@
       <pubDate>Mon, 21 Oct 2019 13:38:26 +0900</pubDate>
       
       <guid>https://tykim06.github.io/2019/10/extending-varchar-column-size/</guid>
-      <description>&lt;p&gt;MySQL 5.7 은 online DDL을 지원하지만 varchar 컬럼 길이 변경 시 일부 지원 되지 않는 경우가 있다.&lt;/p&gt;</description>
+      <description>&lt;p&gt;MySQL 5.7 은 VARCHAR column size 변경 시 online DDL을 지원하지만 일부 지원 되지 않는 경우가 있다.&lt;/p&gt;</description>
     </item>
     
   </channel>

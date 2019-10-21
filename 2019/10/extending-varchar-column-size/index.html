@@ -8,18 +8,18 @@
 <meta name="generator" content="Hugo 0.58.3 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Taeyeop Kim">
 <meta name="keywords" content="">
-<meta name="description" content="MySQL 5.7 은 online DDL을 지원하지만 varchar 컬럼 길이 변경 시 일부 지원 되지 않는 경우가 있다.">
+<meta name="description" content="MySQL 5.7 은 VARCHAR column size 변경 시 online DDL을 지원하지만 일부 지원 되지 않는 경우가 있다.">
 
 
-<meta property="og:description" content="MySQL 5.7 은 online DDL을 지원하지만 varchar 컬럼 길이 변경 시 일부 지원 되지 않는 경우가 있다.">
+<meta property="og:description" content="MySQL 5.7 은 VARCHAR column size 변경 시 online DDL을 지원하지만 일부 지원 되지 않는 경우가 있다.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Extending Varchar Column Size">
 <meta name="twitter:title" content="Extending Varchar Column Size">
 <meta property="og:url" content="https://tykim06.github.io/2019/10/extending-varchar-column-size/">
 <meta property="twitter:url" content="https://tykim06.github.io/2019/10/extending-varchar-column-size/">
 <meta property="og:site_name" content="TY KIM devLog">
-<meta property="og:description" content="MySQL 5.7 은 online DDL을 지원하지만 varchar 컬럼 길이 변경 시 일부 지원 되지 않는 경우가 있다.">
-<meta name="twitter:description" content="MySQL 5.7 은 online DDL을 지원하지만 varchar 컬럼 길이 변경 시 일부 지원 되지 않는 경우가 있다.">
+<meta property="og:description" content="MySQL 5.7 은 VARCHAR column size 변경 시 online DDL을 지원하지만 일부 지원 되지 않는 경우가 있다.">
+<meta name="twitter:description" content="MySQL 5.7 은 VARCHAR column size 변경 시 online DDL을 지원하지만 일부 지원 되지 않는 경우가 있다.">
 <meta property="og:locale" content="en-us">
 
   
@@ -237,7 +237,7 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>MySQL 5.7 은 online DDL을 지원하지만 varchar 컬럼 길이 변경 시 일부 지원 되지 않는 경우가 있다.</p>
+              <p>MySQL 5.7 은 VARCHAR column size 변경 시 online DDL을 지원하지만 일부 지원 되지 않는 경우가 있다.</p>
 
 <h1 id="rebuilds-table">Rebuilds Table</h1>
 
@@ -267,14 +267,13 @@
 </tbody>
 </table>
 
-<p>Column 길이 변경 시 <strong>Rebuilds Table</strong>이 발생하면 online DDL이 불가하다.
-그렇다면, <strong>Rebuilds Table</strong>이 발생하는 경우는 언제 일까?</p>
+<p>MySQL 5.7은 공식적으로 extending VARCHAR column size online DDL을 지원한다. 그렇다면, online DDL이 지원되지 않는 경우는 언제 일까?</p>
 
 <blockquote>
 <p>The number of length bytes required by a VARCHAR column must remain the same. For VARCHAR columns of 0 to 255 bytes in size, one length byte is required to encode the value. For VARCHAR columns of 256 bytes in size or more, two length bytes are required. As a result, in-place ALTER TABLE only supports increasing VARCHAR column size from 0 to 255 bytes, or from 256 bytes to a greater size. <strong><em>In-place ALTER TABLE does not support increasing the size of a VARCHAR column from less than 256 bytes to a size equal to or greater than 256 bytes. In this case, the number of required length bytes changes from 1 to 2, which is only supported by a table copy (ALGORITHM=COPY).</em></strong></p>
 </blockquote>
 
-<p><strong>Rebuilds Table</strong> 발생하는 경우는 255 bytes 이하에서 256 bytes 이상으로 변경할 때 발생한다. 255 bytes 까지는 column size 저장을 위해 1 byte가 필요하지만 256 bytes 부터는 column size 저장을 위해 2 bytes가 필요하다.</p>
+<p>255 bytes 이하에서 256 bytes 이상으로 변경하는 경우에 ALGORITHM=COPY로 동작하여 online DDL 지원이 불가하다. VARCHAR 255 bytes 까지는 column size 저장을 위해 1 byte가 필요하지만 256 bytes 부터는 column size 저장을 위해 2 bytes가 필요하다.</p>
 
 <h1 id="255-bytes-계산">255 bytes 계산</h1>
 
