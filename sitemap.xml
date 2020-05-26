@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://tykim06.github.io/2020/05/mysql-upgrade-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/</loc>
+    <lastmod>2020-05-26T10:43:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tykim06.github.io/post/</loc>
+    <lastmod>2020-05-26T10:43:34+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://tykim06.github.io/</loc>
+    <lastmod>2020-05-26T10:43:34+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://tykim06.github.io/tags/alter/</loc>
     <lastmod>2019-10-21T13:38:26+09:00</lastmod>
   </url>
@@ -28,22 +43,12 @@
   </url>
   
   <url>
-    <loc>https://tykim06.github.io/post/</loc>
-    <lastmod>2019-10-21T13:38:26+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://tykim06.github.io/tags/rebuilds-table/</loc>
     <lastmod>2019-10-21T13:38:26+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://tykim06.github.io/tags/</loc>
-    <lastmod>2019-10-21T13:38:26+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://tykim06.github.io/</loc>
     <lastmod>2019-10-21T13:38:26+09:00</lastmod>
   </url>
   

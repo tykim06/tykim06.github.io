@@ -6,10 +6,19 @@
     <description>Recent content in Posts on TY KIM devLog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 21 Oct 2019 13:38:26 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 26 May 2020 10:43:34 +0900</lastBuildDate>
     
 	<atom:link href="https://tykim06.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>MySQL Upgrade 주의사항</title>
+      <link>https://tykim06.github.io/2020/05/mysql-upgrade-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/</link>
+      <pubDate>Tue, 26 May 2020 10:43:34 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/2020/05/mysql-upgrade-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Extending Varchar Column Size</title>

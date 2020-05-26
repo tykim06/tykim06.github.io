@@ -8,42 +8,28 @@
 <meta name="generator" content="Hugo 0.58.3 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Taeyeop Kim">
 <meta name="keywords" content="">
-<meta name="description" content="MySQL 5.7 은 VARCHAR column size 변경 시 online DDL을 지원하지만 일부 지원 되지 않는 경우가 있다.">
+<meta name="description" content="">
 
 
-<meta property="og:description" content="MySQL 5.7 은 VARCHAR column size 변경 시 online DDL을 지원하지만 일부 지원 되지 않는 경우가 있다.">
+<meta property="og:description" content="">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Extending Varchar Column Size">
-<meta name="twitter:title" content="Extending Varchar Column Size">
-<meta property="og:url" content="https://tykim06.github.io/2019/10/extending-varchar-column-size/">
-<meta property="twitter:url" content="https://tykim06.github.io/2019/10/extending-varchar-column-size/">
+<meta property="og:title" content="MySQL Upgrade 주의사항">
+<meta name="twitter:title" content="MySQL Upgrade 주의사항">
+<meta property="og:url" content="https://tykim06.github.io/2020/05/mysql-upgrade-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/">
+<meta property="twitter:url" content="https://tykim06.github.io/2020/05/mysql-upgrade-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/">
 <meta property="og:site_name" content="TY KIM devLog">
-<meta property="og:description" content="MySQL 5.7 은 VARCHAR column size 변경 시 online DDL을 지원하지만 일부 지원 되지 않는 경우가 있다.">
-<meta name="twitter:description" content="MySQL 5.7 은 VARCHAR column size 변경 시 online DDL을 지원하지만 일부 지원 되지 않는 경우가 있다.">
+<meta property="og:description" content="">
+<meta name="twitter:description" content="">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2019-10-21T13:38:26">
+    <meta property="article:published_time" content="2020-05-26T10:43:34">
   
   
-    <meta property="article:modified_time" content="2019-10-21T13:38:26">
+    <meta property="article:modified_time" content="2020-05-26T10:43:34">
   
   
   
-    
-      <meta property="article:section" content="mysql">
-    
-  
-  
-    
-      <meta property="article:tag" content="alter">
-    
-      <meta property="article:tag" content="varchar">
-    
-      <meta property="article:tag" content="online-ddl">
-    
-      <meta property="article:tag" content="rebuilds-table">
-    
   
 
 
@@ -63,14 +49,14 @@
   <meta property="twitter:image" content="https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/formspring-512.png">
 
 
-    <title>Extending Varchar Column Size</title>
+    <title>MySQL Upgrade 주의사항</title>
 
     <link rel="icon" href="https://tykim06.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://tykim06.github.io/2019/10/extending-varchar-column-size/">
+    <link rel="canonical" href="https://tykim06.github.io/2020/05/mysql-upgrade-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -210,114 +196,31 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Extending Varchar Column Size
+      MySQL Upgrade 주의사항
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2019-10-21T13:38:26&#43;09:00">
+      <time itemprop="datePublished" datetime="2020-05-26T10:43:34&#43;09:00">
         
-  October 21, 2019
+  May 26, 2020
 
       </time>
     
     
-  
-  
-    <span>in</span>
-    
-      <a class="category-link" href="https://tykim06.github.io/categories/mysql">mysql</a>
-    
-  
-
   </div>
 
 </div>
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>MySQL 5.7 은 VARCHAR column size 변경 시 online DDL을 지원하지만 일부 지원 되지 않는 경우가 있다.</p>
-
-<h1 id="rebuilds-table">Rebuilds Table</h1>
-
-<hr />
-
-<p>공식 문서에서 extending varchar column size 지원은 다음과 같다.</p>
-
-<table>
-<thead>
-<tr>
-<th>Operation</th>
-<th>In Place</th>
-<th>Rebuilds Table</th>
-<th>Permits Concurrent DML</th>
-<th>Only Modifies Metadata</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>Extending VARCHAR column size</td>
-<td>Yes</td>
-<td>No</td>
-<td>Yes</td>
-<td>Yes</td>
-</tr>
-</tbody>
-</table>
-
-<p>MySQL 5.7은 공식적으로 extending VARCHAR column size online DDL을 지원한다. 그렇다면, online DDL이 지원되지 않는 경우는 언제 일까?</p>
-
-<blockquote>
-<p>The number of length bytes required by a VARCHAR column must remain the same. For VARCHAR columns of 0 to 255 bytes in size, one length byte is required to encode the value. For VARCHAR columns of 256 bytes in size or more, two length bytes are required. As a result, in-place ALTER TABLE only supports increasing VARCHAR column size from 0 to 255 bytes, or from 256 bytes to a greater size. <strong><em>In-place ALTER TABLE does not support increasing the size of a VARCHAR column from less than 256 bytes to a size equal to or greater than 256 bytes. In this case, the number of required length bytes changes from 1 to 2, which is only supported by a table copy (ALGORITHM=COPY).</em></strong></p>
-</blockquote>
-
-<p>255 bytes 이하에서 256 bytes 이상으로 변경하는 경우에 ALGORITHM=COPY로 동작하여 online DDL 지원이 불가하다. VARCHAR 255 bytes 까지는 column size 저장을 위해 1 byte가 필요하지만 256 bytes 부터는 column size 저장을 위해 2 bytes가 필요하다.</p>
-
-<h1 id="255-bytes-계산">255 bytes 계산</h1>
-
-<hr />
-
-<p>MySQL 4.1 버전부터 varchar(N)의 N 값은 byte가 아닌 size로 변경 되었기 때문에 byte 계산을 위해서 column 문자집합 확인이 필요하다. MySQL에서 utf8은 3 bytes, utf8mb4는 4 bytes로 설계 되어 utf8 인 경우 N*3 bytes, utf8mb4인 경우 N*4 bytes가 된다.</p>
-
-<pre><code>CREATE TABEL `tbl1` (
-  `col1` VARCHAR(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- utf8mb4 문자집합으로 255/4 &gt; 63, 63자 이하에서 64자 이상으로 변경 시 Rebuilds Table이 발생하여 ALGORITMH=COPY가 적용된다.
-ALTER TABLE tbl1 ALGORITHM=INPLACE, CHANGE COLUMN col1 col1 VARCHAR(70);
-ERROR 0A000: ALGORITHM=INPLACE is not supported. Reason: Cannot change column type INPLACE. Try ALGORITHM=COPY.
-</code></pre>
-
-<h1 id="참고">참고</h1>
-
-<hr />
-
-<blockquote>
-<p><a href="https://dev.mysql.com/doc/refman/5.7/en/innodb-online-ddl-operations.html#online-ddl-column-operations">https://dev.mysql.com/doc/refman/5.7/en/innodb-online-ddl-operations.html#online-ddl-column-operations</a></p>
-</blockquote>
+              
               
             </div>
           </div>
           <div id="post-footer" class="post-footer main-content-wrap">
             
-              
-                
-                
-                  <div class="post-footer-tags">
-                    <span class="text-color-light text-small">TAGGED IN</span><br/>
-                    
-  <a class="tag tag--primary tag--small" href="https://tykim06.github.io/tags/alter/">alter</a>
-
-  <a class="tag tag--primary tag--small" href="https://tykim06.github.io/tags/varchar/">varchar</a>
-
-  <a class="tag tag--primary tag--small" href="https://tykim06.github.io/tags/online-ddl/">online-ddl</a>
-
-  <a class="tag tag--primary tag--small" href="https://tykim06.github.io/tags/rebuilds-table/">rebuilds-table</a>
-
-                  </div>
-                
               
             
             <div class="post-actions-wrap">
@@ -327,7 +230,7 @@ ERROR 0A000: ALGORITHM=INPLACE is not supported. Reason: Cannot change column ty
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2020/05/mysql-upgrade-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/" data-tooltip="MySQL Upgrade 주의사항">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -335,7 +238,7 @@ ERROR 0A000: ALGORITHM=INPLACE is not supported. Reason: Cannot change column ty
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2019/10/secure_file_priv/" data-tooltip="secure_file_priv">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2019/10/extending-varchar-column-size/" data-tooltip="Extending Varchar Column Size">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -353,19 +256,19 @@ ERROR 0A000: ALGORITHM=INPLACE is not supported. Reason: Cannot change column ty
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://tykim06.github.io/2019/10/extending-varchar-column-size/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://tykim06.github.io/2020/05/mysql-upgrade-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://tykim06.github.io/2019/10/extending-varchar-column-size/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://tykim06.github.io/2020/05/mysql-upgrade-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://tykim06.github.io/2019/10/extending-varchar-column-size/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://tykim06.github.io/2020/05/mysql-upgrade-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -413,7 +316,7 @@ ERROR 0A000: ALGORITHM=INPLACE is not supported. Reason: Cannot change column ty
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2020/05/mysql-upgrade-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/" data-tooltip="MySQL Upgrade 주의사항">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -421,7 +324,7 @@ ERROR 0A000: ALGORITHM=INPLACE is not supported. Reason: Cannot change column ty
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2019/10/secure_file_priv/" data-tooltip="secure_file_priv">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2019/10/extending-varchar-column-size/" data-tooltip="Extending Varchar Column Size">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -439,19 +342,19 @@ ERROR 0A000: ALGORITHM=INPLACE is not supported. Reason: Cannot change column ty
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://tykim06.github.io/2019/10/extending-varchar-column-size/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://tykim06.github.io/2020/05/mysql-upgrade-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://tykim06.github.io/2019/10/extending-varchar-column-size/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://tykim06.github.io/2020/05/mysql-upgrade-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://tykim06.github.io/2019/10/extending-varchar-column-size/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://tykim06.github.io/2020/05/mysql-upgrade-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -481,19 +384,19 @@ ERROR 0A000: ALGORITHM=INPLACE is not supported. Reason: Cannot change column ty
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftykim06.github.io%2F2019%2F10%2Fextending-varchar-column-size%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftykim06.github.io%2F2020%2F05%2Fmysql-upgrade-%25EC%25A3%25BC%25EC%259D%2598%25EC%2582%25AC%25ED%2595%25AD%2F">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ftykim06.github.io%2F2019%2F10%2Fextending-varchar-column-size%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ftykim06.github.io%2F2020%2F05%2Fmysql-upgrade-%25EC%25A3%25BC%25EC%259D%2598%25EC%2582%25AC%25ED%2595%25AD%2F">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Ftykim06.github.io%2F2019%2F10%2Fextending-varchar-column-size%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Ftykim06.github.io%2F2020%2F05%2Fmysql-upgrade-%25EC%25A3%25BC%25EC%259D%2598%25EC%2582%25AC%25ED%2595%25AD%2F">
           <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -573,9 +476,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/tykim06.github.io\/2019\/10\/extending-varchar-column-size\/';
+          this.page.url = 'https:\/\/tykim06.github.io\/2020\/05\/mysql-upgrade-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD\/';
           
-            this.page.identifier = '\/2019\/10\/extending-varchar-column-size\/'
+            this.page.identifier = '\/2020\/05\/mysql-upgrade-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD\/'
           
         };
         (function() {
