@@ -21,6 +21,19 @@
     </item>
     
     <item>
+      <title>Getting Start Hugo</title>
+      <link>https://tykim06.github.io/2020/05/getting-start-hugo/</link>
+      <pubDate>Tue, 26 May 2020 10:41:17 +0900</pubDate>
+      
+      <guid>https://tykim06.github.io/2020/05/getting-start-hugo/</guid>
+      <description>Hugo 환경 구축 git 설치: https://git-scm.com/
+hugo 설치: https://github.com/gohugoio/hugo/releases
+게시글 작성 hugo new post/**.md
+미리보기 hugo server -D
+게시 ./deloy.sh</description>
+    </item>
+    
+    <item>
       <title>Extending Varchar Column Size</title>
       <link>https://tykim06.github.io/2019/10/extending-varchar-column-size/</link>
       <pubDate>Mon, 21 Oct 2019 13:38:26 +0900</pubDate>
