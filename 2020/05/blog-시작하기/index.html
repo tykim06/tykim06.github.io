@@ -8,25 +8,41 @@
 <meta name="generator" content="Hugo 0.58.3 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="Taeyeop Kim">
 <meta name="keywords" content="">
-<meta name="description" content="Release Version이 다른 경우 Release Version이 다른 경우 시스템 스키마가 다들 수 있기 때문에 백업 시 &ndash;all-databases 옵션은 권장 하지 않는다. &ndash;all-databases 옵션을 추가한 경우 data restore 후에 mysql_upgrade script를 반드시 실행한다.">
+<meta name="description" content="Hugo 환경 구축 git 설치: https://git-scm.com/
+hugo 설치: https://github.com/gohugoio/hugo/releases
+게시글 작성 hugo new post/**.md
+미리보기 hugo server -D
+게시 ./deloy.sh">
 
 
-<meta property="og:description" content="Release Version이 다른 경우 Release Version이 다른 경우 시스템 스키마가 다들 수 있기 때문에 백업 시 &ndash;all-databases 옵션은 권장 하지 않는다. &ndash;all-databases 옵션을 추가한 경우 data restore 후에 mysql_upgrade script를 반드시 실행한다.">
+<meta property="og:description" content="Hugo 환경 구축 git 설치: https://git-scm.com/
+hugo 설치: https://github.com/gohugoio/hugo/releases
+게시글 작성 hugo new post/**.md
+미리보기 hugo server -D
+게시 ./deloy.sh">
 <meta property="og:type" content="article">
-<meta property="og:title" content="mysqldump 주의사항">
-<meta name="twitter:title" content="mysqldump 주의사항">
-<meta property="og:url" content="https://tykim06.github.io/2020/05/mysqldump-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/">
-<meta property="twitter:url" content="https://tykim06.github.io/2020/05/mysqldump-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/">
+<meta property="og:title" content="Blog 시작하기">
+<meta name="twitter:title" content="Blog 시작하기">
+<meta property="og:url" content="https://tykim06.github.io/2020/05/blog-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/">
+<meta property="twitter:url" content="https://tykim06.github.io/2020/05/blog-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/">
 <meta property="og:site_name" content="TY KIM devLog">
-<meta property="og:description" content="Release Version이 다른 경우 Release Version이 다른 경우 시스템 스키마가 다들 수 있기 때문에 백업 시 &ndash;all-databases 옵션은 권장 하지 않는다. &ndash;all-databases 옵션을 추가한 경우 data restore 후에 mysql_upgrade script를 반드시 실행한다.">
-<meta name="twitter:description" content="Release Version이 다른 경우 Release Version이 다른 경우 시스템 스키마가 다들 수 있기 때문에 백업 시 &ndash;all-databases 옵션은 권장 하지 않는다. &ndash;all-databases 옵션을 추가한 경우 data restore 후에 mysql_upgrade script를 반드시 실행한다.">
+<meta property="og:description" content="Hugo 환경 구축 git 설치: https://git-scm.com/
+hugo 설치: https://github.com/gohugoio/hugo/releases
+게시글 작성 hugo new post/**.md
+미리보기 hugo server -D
+게시 ./deloy.sh">
+<meta name="twitter:description" content="Hugo 환경 구축 git 설치: https://git-scm.com/
+hugo 설치: https://github.com/gohugoio/hugo/releases
+게시글 작성 hugo new post/**.md
+미리보기 hugo server -D
+게시 ./deloy.sh">
 <meta property="og:locale" content="en-us">
 
   
-    <meta property="article:published_time" content="2020-05-26T10:43:34">
+    <meta property="article:published_time" content="2020-05-26T10:41:17">
   
   
-    <meta property="article:modified_time" content="2020-05-26T10:43:34">
+    <meta property="article:modified_time" content="2020-05-26T10:41:17">
   
   
   
@@ -49,14 +65,14 @@
   <meta property="twitter:image" content="https://cdn0.iconfinder.com/data/icons/social-flat-rounded-rects/512/formspring-512.png">
 
 
-    <title>mysqldump 주의사항</title>
+    <title>Blog 시작하기</title>
 
     <link rel="icon" href="https://tykim06.github.io/favicon.png">
     
 
     
 
-    <link rel="canonical" href="https://tykim06.github.io/2020/05/mysqldump-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/">
+    <link rel="canonical" href="https://tykim06.github.io/2020/05/blog-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -196,13 +212,13 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      mysqldump 주의사항
+      Blog 시작하기
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-05-26T10:43:34&#43;09:00">
+      <time itemprop="datePublished" datetime="2020-05-26T10:41:17&#43;09:00">
         
   May 26, 2020
 
@@ -217,10 +233,23 @@
             <div class="main-content-wrap">
               
 
-<h1 id="release-version이-다른-경우">Release Version이 다른 경우</h1>
+<h1 id="hugo-환경-구축">Hugo 환경 구축</h1>
 
-<p>Release Version이 다른 경우 시스템 스키마가 다들 수 있기 때문에 백업 시 &ndash;all-databases 옵션은 권장 하지 않는다.
-&ndash;all-databases 옵션을 추가한 경우 data restore 후에 mysql_upgrade script를 반드시 실행한다.</p>
+<p>git 설치: <a href="https://git-scm.com/">https://git-scm.com/</a></p>
+
+<p>hugo 설치: <a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a></p>
+
+<h1 id="게시글-작성">게시글 작성</h1>
+
+<p>hugo new post/**.md</p>
+
+<h1 id="미리보기">미리보기</h1>
+
+<p>hugo server -D</p>
+
+<h1 id="게시">게시</h1>
+
+<p>./deloy.sh</p>
 
               
             </div>
@@ -236,7 +265,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2020/05/mysqldump-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/" data-tooltip="mysqldump 주의사항">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -244,7 +273,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2020/05/blog-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/" data-tooltip="Blog 시작하기">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2019/10/extending-varchar-column-size/" data-tooltip="Extending Varchar Column Size">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -262,19 +291,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://tykim06.github.io/2020/05/mysqldump-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://tykim06.github.io/2020/05/blog-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://tykim06.github.io/2020/05/mysqldump-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://tykim06.github.io/2020/05/blog-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://tykim06.github.io/2020/05/mysqldump-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://tykim06.github.io/2020/05/blog-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -322,7 +351,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2020/05/mysqldump-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/" data-tooltip="mysqldump 주의사항">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -330,7 +359,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2020/05/blog-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/" data-tooltip="Blog 시작하기">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://tykim06.github.io/2019/10/extending-varchar-column-size/" data-tooltip="Extending Varchar Column Size">
               
                   <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
                   <i class="fa fa-angle-right"></i>
@@ -348,19 +377,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://tykim06.github.io/2020/05/mysqldump-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://tykim06.github.io/2020/05/blog-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://tykim06.github.io/2020/05/mysqldump-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://tykim06.github.io/2020/05/blog-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://tykim06.github.io/2020/05/mysqldump-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://tykim06.github.io/2020/05/blog-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -390,19 +419,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftykim06.github.io%2F2020%2F05%2Fmysqldump-%25EC%25A3%25BC%25EC%259D%2598%25EC%2582%25AC%25ED%2595%25AD%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftykim06.github.io%2F2020%2F05%2Fblog-%25EC%258B%259C%25EC%259E%2591%25ED%2595%2598%25EA%25B8%25B0%2F">
           <i class="fa fa-facebook-official"></i><span>Share on Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ftykim06.github.io%2F2020%2F05%2Fmysqldump-%25EC%25A3%25BC%25EC%259D%2598%25EC%2582%25AC%25ED%2595%25AD%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Ftykim06.github.io%2F2020%2F05%2Fblog-%25EC%258B%259C%25EC%259E%2591%25ED%2595%2598%25EA%25B8%25B0%2F">
           <i class="fa fa-twitter"></i><span>Share on Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Ftykim06.github.io%2F2020%2F05%2Fmysqldump-%25EC%25A3%25BC%25EC%259D%2598%25EC%2582%25AC%25ED%2595%25AD%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Ftykim06.github.io%2F2020%2F05%2Fblog-%25EC%258B%259C%25EC%259E%2591%25ED%2595%2598%25EA%25B8%25B0%2F">
           <i class="fa fa-google-plus"></i><span>Share on Google&#43;</span>
         </a>
       </li>
@@ -482,9 +511,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/tykim06.github.io\/2020\/05\/mysqldump-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD\/';
+          this.page.url = 'https:\/\/tykim06.github.io\/2020\/05\/blog-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0\/';
           
-            this.page.identifier = '\/2020\/05\/mysqldump-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD\/'
+            this.page.identifier = '\/2020\/05\/blog-%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0\/'
           
         };
         (function() {
